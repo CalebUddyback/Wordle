@@ -1,0 +1,148 @@
+html,
+body{
+    background: var(--default);
+}
+
+:root {
+    --default: #121213;
+    --empty:   #3a3a3c;
+    --filled:  #6b6b6e;
+    --wrong:   #b59f3b;
+    --right:   #538d4e;
+    --caleb:   #00ff4c;
+    --maddy:   #ff41d0;
+    --becca:   #00ddff;
+    --danny:   #ff9900;
+    --spenn:   #0015ff;
+    --aburg:   #ff0000;
+}
+
+
+#game {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 600px;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: repeat(6,auto);
+    grid-template-columns: repeat(5, auto);
+}
+
+.box{
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--empty);
+    margin: 3px;
+    color: white;
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+}
+
+.box.empty {
+    background: var(--empty);
+}
+
+.box.filled {
+    background: var(--default);
+    border: 2px solid var(--filled);
+}
+
+.box.wrong {
+    background: var(--wrong);
+    border: 2px solid var(--wrong);
+}
+
+.box.right {
+    background: var(--right);
+    border: 2px solid var(--right);
+}
+
+.box.caleb{
+    background: var(--caleb);
+    border: 2px solid var(--caleb);
+}
+
+.box.maddy{
+    background: var(--maddy);
+    border: 2px solid var(--maddy);
+}
+
+.box.becca{
+    background: var(--becca);
+    border: 2px solid var(--becca);
+}
+
+.box.danny{
+    background: var(--danny);
+    border: 2px solid var(--danny);
+}
+
+.box.spenn{
+    background: var(--spenn);
+    border: 2px solid var(--spenn);
+}
+
+.box.aburg{
+    background: var(--aburg);
+    border: 2px solid var(--aburg);
+}
+
+.reveal {
+    animation: flipAnim 0.5s ease;
+}
+
+.place {
+    animation: placeAnim 0.2s ease;
+}
+
+.raise{
+    animation: raiseAnim 0.3s ease;
+}
+
+@keyframes placeAnim{
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes flipAnim{
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes raiseAnim{
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, -5px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
